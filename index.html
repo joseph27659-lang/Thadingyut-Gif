@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>မမအတွက် သီတင်းကျွတ်လက်ဆောင်</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: sans-serif;
+  color: #fff5d6;
+  background: radial-gradient(circle at top, #713a52, #210f2d 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  text-align: center;
+}
+.card {
+  width: 100%;
+  max-width: 420px;
+  padding: 30px 20px;
+  border: 1px solid #f6cf78;
+  border-radius: 24px;
+  background: #ffffff0d;
+  box-shadow: 0 0 35px #ffcb6b22;
+}
+.lanterns { font-size: 42px; letter-spacing: 8px; }
+h1 { color: #ffd982; line-height: 1.6; }
+p { line-height: 2; }
+.small { color: #f5d9b0; font-size: 14px; }
+button {
+  border: none;
+  border-radius: 30px;
+  padding: 14px 24px;
+  margin-top: 12px;
+  background: linear-gradient(90deg, #ffd982, #ffb84d);
+  color: #4a2330;
+  font-size: 16px;
+  font-weight: bold;
+}
+#surprise {
+  display: none;
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #fff1d512;
+  line-height: 2;
+}
+.glow { animation: glow 2s infinite alternate; }
+@keyframes glow {
+  from { text-shadow: 0 0 5px #ffcf70; }
+  to { text-shadow: 0 0 22px #ffcf70; }
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="lanterns glow"></div>
+  <p> သီတင်းကျွတ်အခါသမယ </p>
+  <h1>မမအတွက်<br>လက်ဆောင်လေး </h1>
+  <p>
+    မမရေ... <br>
+    ဒီသီတင်းကျွတ်မှာ ပျော်ရွှင်မှုတွေနဲ့
+    ပြည့်စုံပါစေ။
+  </p>
+  <p class="small">
+    စိတ်ချမ်းသာ ကိုယ်ကျန်းမာပြီး<br>
+    လိုအင်ဆန္ဒတွေ ပြည့်ဝပါစေနော်။
+  </p>
+
+  <button onclick="openGift()"> လက်ဆောင်ဖွင့်မယ်</button>
+<button onclick="readLetter()">💌 မမအတွက် စာလေးဖတ်မယ်</button>
+
+<div id="letter" style="display:none; margin-top:20px; padding:20px; border-radius:16px; background:#fff1d512; line-height:2;">
+  <h2 style="color:#ffd982;">💌 မမရေ...</h2>
+  မမအတွက် ဒီလက်ဆောင်လေးကို<br>
+  ချစ်ခင်လေးစားတဲ့စိတ်နဲ့ ပြင်ဆင်ထားတာပါ။<br>
+  ဒီသီတင်းကျွတ်မှာ ပျော်ရွှင်မှုတွေ<br>
+  အများကြီး ရရှိပါစေနော်။ 🌕💛
+</div>
+  <div id="surprise">
+    <div style="font-size:42px"></div>
+    <h2 style="color:#ffd982">မမ ပျော်ရွှင်ပါစေ</h2>
+    မမရဲ့နေ့ရက်တိုင်းမှာ<br>
+    အပြုံးလေးတွေ ပိုများလာပါစေ။<br>
+    ကောင်းခြင်းမင်္ဂလာတွေနဲ့<br>
+    အမြဲပြည့်စုံပါစေနော်။ 
+    <p> သီတင်းကျွတ် ဆုတောင်းလက်ဆောင် </p>
+  </div>
+</div>
+
+<script>
+function openGift() {
+  document.getElementById("surprise").style.display = "block";
+}function readLetter() {
+  document.getElementById("letter").style.display = "block";
+}
+</script>
+</body>
+</html>
